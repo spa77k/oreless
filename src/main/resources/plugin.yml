@@ -1,0 +1,19 @@
+name: Oreless
+version: 1.0.0
+main: dev.spa.oreless.OrelessPlugin
+api-version: "1.21"
+description: Removes naturally generated ores from the build world while keeping normal terrain generation.
+author: spa
+load: STARTUP
+softdepend:
+  - Multiverse-Core
+commands:
+  oreless:
+    description: Scan existing generated build chunks and remove ore blocks once.
+    usage: /oreless scan|rescan
+    permission: oreless.scan
+    permission-message: このコマンドを実行する権限がありません。
+permissions:
+  oreless.scan:
+    description: Run the one-time existing build world ore scan.
+    default: op
